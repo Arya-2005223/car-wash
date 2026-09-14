@@ -1,0 +1,106 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-deep);
+  border-bottom: 1px solid rgba(246, 250, 249, 0.08);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+  color: var(--color-foam);
+}
+
+.logoMark {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav a {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: rgba(246, 250, 249, 0.78);
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.15s ease;
+}
+
+.nav a:hover {
+  color: var(--color-foam);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-aqua);
+  transition: width 0.2s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menuBtn {
+  display: inline-flex;
+  background: transparent;
+  border: 1.5px solid rgba(246, 250, 249, 0.35);
+  border-radius: 10px;
+  padding: 9px 10px;
+  color: var(--color-foam);
+}
+
+.mobilePanel {
+  background: var(--color-deep-2);
+  border-top: 1px solid rgba(246, 250, 249, 0.08);
+  padding: 8px 0 20px;
+}
+
+.mobilePanel a {
+  display: block;
+  padding: 12px 24px;
+  color: var(--color-foam);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.mobilePanel a:hover {
+  background: rgba(246, 250, 249, 0.06);
+}
+
+@media (min-width: 860px) {
+  .nav {
+    display: flex;
+  }
+  .menuBtn {
+    display: none;
+  }
+}

@@ -1,0 +1,150 @@
+.section {
+  background: var(--color-mist);
+  padding: 80px 0;
+}
+
+.head {
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+.head h2 {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  color: var(--color-ink);
+  margin-top: 10px;
+}
+
+.head p {
+  color: var(--color-steel-dark);
+  font-size: 1.02rem;
+  margin-top: 12px;
+  line-height: 1.55;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+.ticket {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px -12px rgba(11, 49, 66, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ticketHighlight {
+  outline: 2px solid var(--color-aqua);
+  outline-offset: -2px;
+}
+
+.badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--color-sun);
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 4px 9px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.top {
+  padding: 24px 24px 20px;
+}
+
+.ticketNo {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-steel);
+  letter-spacing: 0.08em;
+}
+
+.name {
+  font-size: 1.9rem;
+  color: var(--color-ink);
+  margin-top: 6px;
+}
+
+.desc {
+  font-size: 0.92rem;
+  color: var(--color-steel-dark);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.perforation {
+  position: relative;
+  border-top: 2px dashed var(--color-line);
+  margin: 0 4px;
+}
+
+.notch {
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  background: var(--color-mist);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.notchLeft {
+  left: -9px;
+}
+
+.notchRight {
+  right: -9px;
+}
+
+.bottom {
+  padding: 22px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-family: var(--font-mono);
+}
+
+.currency {
+  font-size: 1.1rem;
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
+.price {
+  font-size: 2.4rem;
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
+.per {
+  font-size: 0.85rem;
+  color: var(--color-steel);
+}
+
+@media (min-width: 760px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1040px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

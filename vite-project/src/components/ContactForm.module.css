@@ -1,0 +1,149 @@
+.section {
+  background: var(--color-foam);
+  padding: 80px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.info h2 {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  color: var(--color-ink);
+  margin-top: 10px;
+}
+
+.info p {
+  color: var(--color-steel-dark);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin-top: 14px;
+  max-width: 42ch;
+}
+
+.infoList {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infoItem {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.infoIcon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  color: var(--color-aqua-dark);
+}
+
+.infoItem strong {
+  display: block;
+  color: var(--color-ink);
+  font-size: 0.95rem;
+}
+
+.infoItem span {
+  font-size: 0.88rem;
+  color: var(--color-steel-dark);
+}
+
+.form {
+  background: #ffffff;
+  border: 1px solid var(--color-line);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: var(--shadow-soft);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.field input,
+.field select,
+.field textarea {
+  border: 1.5px solid var(--color-line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  background: var(--color-foam);
+  transition: border-color 0.15s ease;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--color-aqua);
+}
+
+.fieldError input,
+.fieldError select,
+.fieldError textarea {
+  border-color: #d1483f;
+}
+
+.errorText {
+  font-size: 0.78rem;
+  color: #d1483f;
+}
+
+.submitBtn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.successBox {
+  background: var(--color-mist);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+.successBox h3 {
+  font-size: 1.6rem;
+  color: var(--color-ink);
+}
+
+.successBox p {
+  margin-top: 8px;
+  color: var(--color-steel-dark);
+  font-size: 0.92rem;
+}
+
+@media (min-width: 700px) {
+  .row2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 940px) {
+  .grid {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 56px;
+  }
+}
